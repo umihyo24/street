@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tile Strategy Game</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="container">
+    <h1>Tile Placement Strategy</h1>
+
+    <section id="hud" class="panel"></section>
+
+    <section id="controls" class="panel">
+      <button id="startButton" type="button">ゲーム開始</button>
+      <p id="phaseText"></p>
+      <p id="messageText" class="message"></p>
+    </section>
+
+    <section id="choices" class="panel">
+      <h2>タイル候補</h2>
+      <div id="choiceButtons" class="choice-buttons"></div>
+      <p class="hint">候補を1つ選び、空きマスをクリックして配置します。</p>
+    </section>
+
+    <section id="board" class="board" aria-label="game-board"></section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
