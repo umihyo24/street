@@ -1,0 +1,141 @@
+:root {
+  color-scheme: dark;
+  --bg: #1b1f28;
+  --panel: #242b36;
+  --accent: #6ec6ff;
+  --text: #e8eff7;
+  --muted: #9fb0c0;
+  --tile: #2f3b4a;
+  --tile-border: #4f6277;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.container {
+  max-width: 920px;
+  margin: 0 auto;
+  padding: 16px;
+}
+
+.panel {
+  background: var(--panel);
+  border: 1px solid #3a4658;
+  border-radius: 10px;
+  padding: 12px;
+  margin-bottom: 12px;
+}
+
+#hud {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(90px, 1fr));
+  gap: 8px;
+}
+
+.stat {
+  padding: 8px;
+  background: #1f252f;
+  border-radius: 8px;
+  border: 1px solid #3a4658;
+}
+
+#startButton {
+  background: var(--accent);
+  color: #082235;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 12px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.choice-buttons {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.choice-btn {
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid #4d6075;
+  background: #2b3644;
+  color: var(--text);
+  cursor: pointer;
+}
+
+.choice-btn.selected {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 1px var(--accent);
+}
+
+.hint,
+.message,
+#phaseText {
+  color: var(--muted);
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 8px;
+}
+
+.cell {
+  min-height: 88px;
+  border: 1px dashed var(--tile-border);
+  border-radius: 8px;
+  background: #1e2530;
+  cursor: pointer;
+  padding: 6px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.cell.filled {
+  border-style: solid;
+  background: var(--tile);
+}
+
+.tile-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 4px;
+  font-size: 12px;
+}
+
+.tile-visual {
+  height: 42px;
+  border-radius: 6px;
+  border: 1px solid #586c82;
+  background: #202834;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.tile-visual img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.placeholder {
+  font-size: 11px;
+  color: #c8d5e4;
+}
+
+.tile-footer {
+  font-size: 11px;
+  color: #c6d5e6;
+}
